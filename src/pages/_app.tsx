@@ -1,24 +1,27 @@
 // import App from 'next/app'
-import 'gutenberg-css/dist/gutenberg.css'
-import 'gutenberg-css/dist/themes/modern.css'
+import "gutenberg-css/dist/gutenberg.css";
+import "gutenberg-css/dist/themes/modern.css";
 
-function MyApp({Component, pageProps}: any) {
-    return <>
-        <style global jsx>{`
-          @media screen {
-            html {
-              background: gray !important;
-            }
-
-            body {
-              width: 21cm;
-              margin-top: 3cm;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
-            }
+function MyApp({ Component, pageProps }: any) {
+  return (
+    <>
+      <style global jsx>{`
+        @media screen {
+          html {
+            background: gray !important;
           }
-        `}</style>
-        <Component {...pageProps} />
+
+          body {
+            width: 21cm;
+            margin-top: 3cm;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px 6px rgba(0, 0, 0, 0.23) !important;
+          }
+        }
+      `}</style>
+      <Component {...pageProps} />
     </>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -33,4 +36,4 @@ function MyApp({Component, pageProps}: any) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;
