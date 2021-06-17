@@ -1,3 +1,7 @@
+## fetures
+
+- support [MDX](https://mdxjs.com/) markdown syntax
+
 ## Gutenberg style
 
 Based on <https://github.com/BafS/Gutenberg>, there are
