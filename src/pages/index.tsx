@@ -1,5 +1,10 @@
+import { DocTitle } from "../components/page";
+
 export default function Home() {
-    return <>
-        <h1> Hello world!</h1>
+  return (
+    <>
+      <DocTitle>hello world</DocTitle>
+      <h1> Hello world!</h1>
     </>
+  );
 }

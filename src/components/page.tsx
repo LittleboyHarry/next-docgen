@@ -1,5 +1,6 @@
+import Head from "next/head";
 import styled from "styled-components";
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from "react";
 
 const PageBreakerStyle = styled.div`
   @media print {
@@ -9,7 +10,7 @@ const PageBreakerStyle = styled.div`
   }
 
   @media screen {
-    color:gray;
+    color: gray;
     display: flex;
     align-items: center;
     margin: 0.5cm 0;
@@ -26,24 +27,30 @@ const PageBreakerStyle = styled.div`
       margin: 0 0.5rem;
     }
   }
-`
+`;
 
 export function PageBreaker() {
-    return <PageBreakerStyle className="break-before">
-        <hr/>
-        <p>( page break )</p>
-        <hr/>
+  return (
+    <PageBreakerStyle className="break-before">
+      <hr />
+      <p>( page break )</p>
+      <hr />
     </PageBreakerStyle>
+  );
 }
 
-export function PageBreakAvoid({children}:PropsWithChildren<{}>){
-    return <p className="avoid-break-inside">
-        {children}
-    </p>
+export function PageBreakAvoid({ children }: PropsWithChildren<{}>) {
+  return <p className="avoid-break-inside">{children}</p>;
 }
 
-export function NoReformat({children}:PropsWithChildren<{}>){
-    return <div className="no-reformat">
-        {children}
-    </div>
+export function NoReformat({ children }: PropsWithChildren<{}>) {
+  return <div className="no-reformat">{children}</div>;
+}
+
+export function DocTitle({ children }: { children: string }) {
+  return (
+    <Head>
+      <title>{children}</title>
+    </Head>
+  );
 }
