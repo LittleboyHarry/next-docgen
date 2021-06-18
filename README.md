@@ -1,6 +1,7 @@
 ## fetures
 
 - support [MDX](https://mdxjs.com/) markdown syntax
+- code syntax highlight by [Prism](https://prismjs.com/)
 
 ## Gutenberg style
 
