@@ -1,5 +1,13 @@
 make your document by markdown(x) or javascript/typescript, print to pdf document!
 
+usage:
+
+1. git clone the repo
+2. open terminal at it
+3. `npm i` or `yarn` (i like `pnpm i` fastest)
+4. `npm start`
+5. waiting then open `http://localhost:3000`
+
 ## Fetures
 
 - support [MDX](https://mdxjs.com/) markdown syntax
