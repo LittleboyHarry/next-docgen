@@ -2,13 +2,12 @@
 
 import React, { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-import "gutenberg-css/dist/gutenberg.css";
-import "gutenberg-css/dist/themes/modern.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/themes/prism.css";
-import DocTemplate, { theme, config } from "../template";
 import "katex/dist/katex.css";
 import Menubar from "../internal/Menubar";
+import { GutenbergTheme } from "../internal/theme";
+import DocTemplate, { theme, config } from "../template";
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -60,12 +59,12 @@ export default function App({ Component, pageProps }: any) {
   }, []);
 
   return (
-    <>
+    <GutenbergTheme>
       <GlobalStyle />
       <DocTemplate>
         <Component {...pageProps} />
       </DocTemplate>
       <Menubar />
-    </>
+    </GutenbergTheme>
   );
 }
