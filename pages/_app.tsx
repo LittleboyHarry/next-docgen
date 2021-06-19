@@ -41,8 +41,8 @@ blockquote {
     width: 21cm;
     margin-top: 3cm;
     margin-bottom: 2cm;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-      0 6px 6px rgba(0, 0, 0, 0.23) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+      0 6px 6px rgba(0, 0, 0, 0.2) !important;
   }
 }
 `;
