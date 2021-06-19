@@ -8,6 +8,7 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/themes/prism.css";
 import DocTemplate, { theme, config } from "../template";
 import "katex/dist/katex.css";
+import Menubar from "../internal/Menubar";
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -39,6 +40,7 @@ blockquote {
   body {
     width: 21cm;
     margin-top: 3cm;
+    margin-bottom: 2cm;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
       0 6px 6px rgba(0, 0, 0, 0.23) !important;
   }
@@ -63,6 +65,7 @@ export default function App({ Component, pageProps }: any) {
       <DocTemplate>
         <Component {...pageProps} />
       </DocTemplate>
+      <Menubar />
     </>
   );
 }

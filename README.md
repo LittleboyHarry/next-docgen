@@ -14,7 +14,9 @@ modify `template.tsx` for all documents.
 
 write your components in `components` directory to reuse, if you master `react jsx` tech.
 
-do NOT EDIT `pages/_app.tsx`
+post image assets at `public` directory.
+
+do NOT EDIT `pages/_app.tsx` and `internal`
 
 ## Notice
 
