@@ -4,6 +4,7 @@ make your document by markdown(x) or javascript/typescript, print to pdf documen
 
 - support [MDX](https://mdxjs.com/) markdown syntax
 - code syntax highlight by [Prism](https://prismjs.com/)
+- math formula support by KaTeX
 
 ## How to Write Doc?
 

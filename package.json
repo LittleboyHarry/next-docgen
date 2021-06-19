@@ -10,12 +10,16 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.0.0",
     "@types/mdx-js__react": "^1.5.3",
+    "glob": "^7.1.7",
     "gutenberg-css": "^0.6.1",
+    "katex": "^0.13.11",
     "next": "latest",
     "prismjs": "^1.23.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "rehype-katex": "^5.0.0",
+    "remark-math": "^3.0.1",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {

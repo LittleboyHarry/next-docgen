@@ -7,6 +7,7 @@ import "gutenberg-css/dist/themes/modern.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/themes/prism.css";
 import DocTemplate, { theme, config } from "../template";
+import "katex/dist/katex.css";
 
 const GlobalStyle = createGlobalStyle`
 body{
