@@ -34,3 +34,8 @@ Based on <https://github.com/BafS/Gutenberg>, there are
 
 - `PageBreaker` `PageBreakAvoid` `NoReformat` refactored utils class in `src/components/page.tsx`.
 - build-in `old` `book` `modern` themes
+
+## Welcome Contribute
+
+- browser headless render by puppeteer
+- "pixel perfect" problems
