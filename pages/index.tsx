@@ -1,4 +1,4 @@
-import { DocTitle } from "../components/page";
+import { DocTitle } from "../utils";
 
 export default function Home() {
   return (

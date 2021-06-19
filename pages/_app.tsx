@@ -1,20 +1,21 @@
+// !! NO EDIT ME unless you understand what happen !!
+
 import React, { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 import "gutenberg-css/dist/gutenberg.css";
 import "gutenberg-css/dist/themes/modern.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/themes/prism.css";
-
-const background = "#f7f7f7";
+import DocTemplate, { theme, config } from "../template";
 
 const GlobalStyle = createGlobalStyle`
 body{
-  font-size:12pt;
+  font-size:${theme.fontSize};
 }
 
 pre{
   border-radius: 0.2cm;
-  background: ${background} !important;
+  background: ${theme.boxColor} !important;
   font-size:0.9em;
 
   &>code{
@@ -24,7 +25,7 @@ pre{
 }
 
 blockquote {
-  background: ${background} !important;
+  background: ${theme.boxColor} !important;
   margin-left: 0;
   margin-right: 0;
 }
@@ -43,10 +44,11 @@ blockquote {
 }
 `;
 
-function MyApp({ Component, pageProps }: any) {
+export default function App({ Component, pageProps }: any) {
   useEffect(() => {
     (async function () {
-      document.body.classList.add("line-numbers");
+      if (config.showCodeLineNumber)
+        document.body.classList.add("line-numbers");
       const Prism = await import("prismjs");
       // @ts-ignore
       await import("prismjs/plugins/line-numbers/prism-line-numbers.js");
@@ -57,21 +59,9 @@ function MyApp({ Component, pageProps }: any) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <DocTemplate>
+        <Component {...pageProps} />
+      </DocTemplate>
     </>
   );
 }
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// MyApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
-
-export default MyApp;
