@@ -2,7 +2,8 @@
   "name": "nextjs-pdfgen",
   "version": "1.0.0",
   "scripts": {
-    "start": "next"
+    "start": "next",
+    "debug": "NODE_OPTIONS='--inspect=19229' next dev"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
