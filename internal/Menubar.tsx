@@ -163,31 +163,36 @@ function ThemeChangeButton() {
   );
 }
 
-export default function Menubar() {
-  if (!(typeof window !== "undefined" && window.location.protocol !== "file:"))
-    return null;
+function isPreview(): boolean {
+  return typeof window !== "undefined" && window.location.protocol !== "file:";
+}
 
+export default function Menubar() {
   return (
-    <MenubarRoot>
-      <ButtonGroup>
-        <CircleButton
-          title="preview size not changeable"
-          color="#e0e0e0"
-          disabled
-          style={{ fontWeight: "bold" }}
-        >
-          A4
-        </CircleButton>
-        <ThemeChangeButton />
-        <CircleButton
-          title="Print (^+p)"
-          color="rgb(220, 0, 78)"
-          onClick={() => window.print()}
-        >
-          {printIcon}
-        </CircleButton>
-      </ButtonGroup>
-      <NavigationButton />
-    </MenubarRoot>
+    <div suppressHydrationWarning={true}>
+      {isPreview() && (
+        <MenubarRoot>
+          <ButtonGroup>
+            <CircleButton
+              title="preview size not changeable"
+              color="#e0e0e0"
+              disabled
+              style={{ fontWeight: "bold" }}
+            >
+              A4
+            </CircleButton>
+            <ThemeChangeButton />
+            <CircleButton
+              title="Print (^+p)"
+              color="rgb(220, 0, 78)"
+              onClick={() => window.print()}
+            >
+              {printIcon}
+            </CircleButton>
+          </ButtonGroup>
+          <NavigationButton />
+        </MenubarRoot>
+      )}
+    </div>
   );
 }
