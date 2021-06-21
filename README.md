@@ -1,5 +1,7 @@
 make your document by markdown(x) or javascript/typescript, print to pdf document!
 
+_technologies Powered by chrominum frontend browser client and [next.js](https://nextjs.org/) backend server._
+
 usage:
 
 1. git clone the repo
