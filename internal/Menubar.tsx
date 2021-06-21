@@ -12,6 +12,11 @@ const MenubarRoot = styled.div`
   z-index: 1;
   font-family: sans-serif;
 
+  pointer-events: none;
+  & > * {
+    pointer-events: initial;
+  }
+
   @media print {
     display: none;
   }
